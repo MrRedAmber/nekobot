@@ -7,15 +7,6 @@ from lib.nekobot import Nekobot
 from plugins.helloworld import HelloWorld
 from plugins.giphy import Giphy
 
-# Load the Nekobot environment
-with open('nekobot.rc', 'r') as nekobotrc:
-    for line in nekobotrc:
-        export = line.split('=')
-        os.environ[export[0]] = export[1].strip('\n')
-
-nekobotrc.close()
-# Finish loading the Nekobot environment
-
 # Setup the logging system
 logger = logging.getLogger('discord')
 handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')

@@ -1,0 +1,6 @@
+venv
+.idea/
+.gitignore
+*.rc
+README.md
+*.pyc

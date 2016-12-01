@@ -19,15 +19,8 @@ class Nekobot(discord.Client):
         self.plugin_manager.load_all()
 
     async def on_ready(self):
-        """
-        Called when the bot is ready.
-
-        """
+        # Called when the bot is ready
         log.info('Nekobot is ready! =^..^=')
-
-        # Load all the plugins
-        # for plugin in self.plugins:
-        #     self.loop.create_task(plugin.on_ready())
 
     async def send_message(self, *args, **kwargs):
         return await super().send_message(*args, **kwargs)
@@ -38,7 +31,4 @@ class Nekobot(discord.Client):
 
         for plugin in self.plugins:
             self.loop.create_task(plugin.on_message(message))
-        # enabled_plugins = await self.get_plugins(server)
-        # for plugin in enabled_plugins:
-        #     self.loop.create_task(plugin._on_message(message))
 
