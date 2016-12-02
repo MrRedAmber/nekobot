@@ -11,3 +11,5 @@ Running with docker
 ```bash
 $ docker run --env-file nekobot.rc -it --rm --name nekobot nekobot
 ```
+
+with inspiriation from [mee6](https://github.com/cookkkie/mee6)
