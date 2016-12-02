@@ -4,9 +4,9 @@ import os
 from lib.nekobot import Nekobot
 
 # Load the plugins
-from plugins.helloworld import HelloWorld
 from plugins.giphy import Giphy
-
+from plugins.nekobot import Nekobot as NekobotPlugin
+from plugins.commands import Commands
 # Setup the logging system
 logger = logging.getLogger('discord')
 handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')

@@ -1,3 +1,4 @@
+v0.1 (BETA)
 # Nekobot
 
 ![](https://pbs.twimg.com/profile_images/3590976478/37d04beba0abebc0212070df35c511e9.jpeg)

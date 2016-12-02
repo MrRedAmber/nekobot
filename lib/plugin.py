@@ -17,13 +17,16 @@ class PluginMount(type):
 
 class Plugin(object, metaclass=PluginMount):
 
-    is_global = False
-    fancy_name = None
+    plugin_name = None
+    channel_name = None
 
     def __init__(self, nekobot):
         self.nekobot = nekobot
 
     async def on_ready(self):
+        pass
+
+    async def get_commands(self):
         pass
 
     async def _on_message(self, message):

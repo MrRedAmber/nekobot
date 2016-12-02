@@ -1,25 +1,24 @@
 from lib.plugin import Plugin
 from random import randrange
-from urllib.request import urlopen
 import logging
-import json
 import re
 import requests
 
 log = logging.getLogger('discord')
 
+
 class Giphy(Plugin):
     plugin_name = 'Giphy'
 
-    async def get_commands(self, server):
+    async def get_commands(self):
         commands = [
             {
-                'name': '!gif [KEYWORD STRING]',
+                'name': '!gif keyword',
                 'description': 'Search the Giphy collection '
                                'against a given keyword'
             },
             {
-                'name': '!giphy [KEYWORD STRING]',
+                'name': '!giphy keyword',
                 'description': 'Search the Giphy collection '
                                'against a given keyword'
             }
@@ -46,12 +45,12 @@ class Giphy(Plugin):
         if check is None:
             return
 
-        log.info('{}#{}@{} >> {}'.format(
-            message.author.name,
-            message.author.discriminator,
-            message.server.name,
-            message.clean_content
-        ))
+        # log.info('{}#{}@{} >> {}'.format(
+        #     message.author.name,
+        #     message.author.discriminator,
+        #     message.server.name,
+        #     message.clean_content
+        # ))
 
         nature, name = check.groups()
         gif = self.get_giphy(name)
