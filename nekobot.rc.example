@@ -1,0 +1,5 @@
+# The discord application token
+NEKBOT_TOKEN=
+
+# The log level of nekobot.log
+NEKOBOT_DEBUG=

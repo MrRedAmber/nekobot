@@ -1,0 +1,100 @@
+2016-12-02 08:26:55,737:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
+2016-12-02 08:26:55,737:INFO:discord: Loading plugin Commands.
+2016-12-02 08:26:55,737:INFO:discord: Plugin Commands loaded.
+2016-12-02 08:26:55,737:INFO:discord: Loading plugin Giphy.
+2016-12-02 08:26:55,737:INFO:discord: Plugin Giphy loaded.
+2016-12-02 08:26:55,737:INFO:discord: Loading plugin Nekobot.
+2016-12-02 08:26:55,737:INFO:discord: Plugin Nekobot loaded.
+2016-12-02 08:26:55,738:INFO:discord.client: logging in using static token
+2016-12-02 08:26:56,552:DEBUG:discord.http: GET https://discordapp.com/api/v6/users/@me with None has returned 200
+2016-12-02 08:26:56,552:DEBUG:discord.http: GET https://discordapp.com/api/v6/users/@me has received {'discriminator': '9195', 'email': None, 'mfa_enabled': False, 'username': 'nekobot', 'verified': True, 'avatar': '52c09ddd2c18d6a31774e43201080bb3', 'bot': True, 'id': '253499115667849216'}
+2016-12-02 08:26:56,699:DEBUG:discord.http: GET https://discordapp.com/api/v6/gateway with None has returned 200
+2016-12-02 08:26:56,700:DEBUG:discord.http: GET https://discordapp.com/api/v6/gateway has received {'url': 'wss://gateway.discord.gg'}
+2016-12-02 08:26:57,519:INFO:discord.gateway: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2016-12-02 08:26:57,520:DEBUG:discord.client: Dispatching event socket_raw_receive
+2016-12-02 08:26:57,520:DEBUG:discord.gateway: WebSocket Event: {'t': None, 's': None, 'op': 10, 'd': {'heartbeat_interval': 41250, '_trace': ['discord-gateway-prd-1-14']}}
+2016-12-02 08:26:57,520:DEBUG:discord.client: Dispatching event socket_response
+2016-12-02 08:26:57,521:INFO:discord.gateway: sent the identify payload to create the websocket
+2016-12-02 08:26:57,648:DEBUG:discord.client: Dispatching event socket_raw_receive
+2016-12-02 08:26:57,648:DEBUG:discord.gateway: WebSocket Event: {'t': 'READY', 's': 1, 'op': 0, 'd': {'session_id': '39f9acd6396c545286686a7f97df98ab', 'v': 6, 'presences': [], 'private_channels': [], 'user_settings': {}, '_trace': ['discord-gateway-prd-1-14', 'discord-sessions-prd-1-4'], 'guilds': [{'id': '95598563198771200', 'unavailable': True}], 'user': {'bot': True, 'avatar': '52c09ddd2c18d6a31774e43201080bb3', 'mfa_enabled': False, 'discriminator': '9195', 'verified': True, 'email': None, 'username': 'nekobot', 'id': '253499115667849216'}, 'relationships': []}}
+2016-12-02 08:26:57,648:DEBUG:discord.client: Dispatching event socket_response
+2016-12-02 08:26:57,650:DEBUG:discord.client: Dispatching event socket_raw_receive
+2016-12-02 08:26:57,650:DEBUG:discord.gateway: WebSocket Event: {'t': 'GUILD_CREATE', 's': 2, 'op': 0, 'd': {'large': False, 'owner_id': '94815643441831936', 'region': 'london', 'members': [{'deaf': False, 'mute': False, 'roles': [], 'user': {'discriminator': '1467', 'avatar': 'ee103c0c3b86744339be9bd2d631872f', 'username': 'MrRedAmber', 'id': '94815643441831936'}, 'joined_at': '2015-09-21T19:14:33.611000+00:00'}, {'deaf': False, 'mute': False, 'roles': [], 'user': {'discriminator': '5183', 'avatar': None, 'username': 'Zux', 'id': '115351196033613828'}, 'joined_at': '2016-05-28T06:27:17.997000+00:00'}, {'deaf': False, 'mute': False, 'roles': [], 'user': {'discriminator': '4103', 'avatar': 'eaa7d7ac073d5b90ec5969b115a5466c', 'username': 'Senza', 'id': '185621001869066240'}, 'joined_at': '2016-05-27T05:36:11.678000+00:00'}, {'deaf': False, 'mute': False, 'roles': ['253994325837479937'], 'user': {'discriminator': '9195', 'avatar': '52c09ddd2c18d6a31774e43201080bb3', 'username': 'nekobot', 'bot': True, 'id': '253499115667849216'}, 'joined_at': '2016-12-01T21:22:46.325000+00:00'}], 'emojis': [], 'presences': [{'game': None, 'user': {'id': '94815643441831936'}, 'status': 'online'}, {'game': None, 'user': {'id': '253499115667849216'}, 'status': 'online'}], 'mfa_level': 0, 'features': [], 'unavailable': False, 'afk_timeout': 300, 'member_count': 4, 'id': '95598563198771200', 'joined_at': '2016-12-01T21:22:46.325000+00:00', 'afk_channel_id': None, 'name': 'AyyLmao', 'channels': [{'name': 'post_memes_here', 'type': 0, 'position': 0, 'topic': '', 'last_message_id': '254266672058335232', 'permission_overwrites': [], 'id': '95598563198771200'}, {'user_limit': 0, 'name': 'Meme Nation', 'type': 2, 'bitrate': 64000, 'position': 0, 'permission_overwrites': [], 'id': '95598563286851584'}, {'name': 'nekobot', 'type': 0, 'position': 1, 'topic': None, 'last_message_id': '254266823548207104', 'permission_overwrites': [], 'id': '253996743862124546'}], 'splash': None, 'roles': [{'color': 0, 'name': '@everyone', 'position': 0, 'managed': False, 'mentionable': False, 'hoist': False, 'permissions': 37215297, 'id': '95598563198771200'}, {'color': 0, 'name': 'nekobot', 'position': 1, 'managed': True, 'mentionable': False, 'hoist': False, 'permissions': 2080898175, 'id': '253994325837479937'}], 'default_message_notifications': 0, 'verification_level': 0, 'voice_states': [], 'icon': None}}
+2016-12-02 08:26:57,651:DEBUG:discord.client: Dispatching event socket_response
+2016-12-02 08:26:57,651:DEBUG:discord.client: Dispatching event server_available
+2016-12-02 08:26:59,654:DEBUG:discord.client: Dispatching event ready
+2016-12-02 08:26:59,655:INFO:discord: Nekobot is ready! =^..^=
+2016-12-02 08:27:16,184:DEBUG:discord.client: Dispatching event socket_raw_receive
+2016-12-02 08:27:16,184:DEBUG:discord.gateway: WebSocket Event: {'t': 'TYPING_START', 's': 3, 'op': 0, 'd': {'channel_id': '253996743862124546', 'user_id': '94815643441831936', 'timestamp': 1480692430}}
+2016-12-02 08:27:16,185:DEBUG:discord.client: Dispatching event socket_response
+2016-12-02 08:27:16,185:DEBUG:discord.client: Dispatching event typing
+2016-12-02 08:27:17,182:DEBUG:discord.client: Dispatching event socket_raw_receive
+2016-12-02 08:27:17,182:DEBUG:discord.gateway: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 4, 'op': 0, 'd': {'attachments': [], 'pinned': False, 'type': 0, 'mention_everyone': False, 'tts': False, 'nonce': '254267252298219520', 'content': '!commands', 'embeds': [], 'channel_id': '253996743862124546', 'timestamp': '2016-12-02T15:27:11.682000+00:00', 'author': {'discriminator': '1467', 'avatar': 'ee103c0c3b86744339be9bd2d631872f', 'username': 'MrRedAmber', 'id': '94815643441831936'}, 'id': '254267229971939329', 'edited_timestamp': None, 'mentions': [], 'mention_roles': []}}
+2016-12-02 08:27:17,182:DEBUG:discord.client: Dispatching event socket_response
+2016-12-02 08:27:17,183:DEBUG:discord.client: Dispatching event message
+2016-12-02 08:27:17,358:DEBUG:discord.client: Dispatching event socket_raw_receive
+2016-12-02 08:27:17,359:DEBUG:discord.gateway: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 5, 'op': 0, 'd': {'attachments': [], 'pinned': False, 'type': 0, 'mention_everyone': False, 'tts': False, 'nonce': '8283683027598802827', 'content': 'Commands:\n\n    !commands: Return a list of available commands\n\n    !gif keyword: Search the Giphy collection against a given keyword\n\n    !giphy keyword: Search the Giphy collection against a given keyword', 'embeds': [], 'channel_id': '253996743862124546', 'timestamp': '2016-12-02T15:27:11.899000+00:00', 'author': {'discriminator': '9195', 'avatar': '52c09ddd2c18d6a31774e43201080bb3', 'username': 'nekobot', 'bot': True, 'id': '253499115667849216'}, 'id': '254267230882103296', 'edited_timestamp': None, 'mentions': [], 'mention_roles': []}}
+2016-12-02 08:27:17,359:DEBUG:discord.client: Dispatching event socket_response
+2016-12-02 08:27:17,359:DEBUG:discord.client: Dispatching event message
+2016-12-02 08:27:17,390:DEBUG:discord.http: POST https://discordapp.com/api/v6/channels/253996743862124546/messages with {"content":"Commands:\n\n    !commands: Return a list of available commands\n\n    !gif keyword: Search the Giphy collection against a given keyword\n\n    !giphy keyword: Search the Giphy collection against a given keyword\n\n","nonce":8283683027598802827} has returned 200
+2016-12-02 08:27:17,391:DEBUG:discord.http: POST https://discordapp.com/api/v6/channels/253996743862124546/messages has received {'pinned': False, 'type': 0, 'mention_everyone': False, 'tts': False, 'nonce': '8283683027598802827', 'channel_id': '253996743862124546', 'content': 'Commands:\n\n    !commands: Return a list of available commands\n\n    !gif keyword: Search the Giphy collection against a given keyword\n\n    !giphy keyword: Search the Giphy collection against a given keyword', 'id': '254267230882103296', 'attachments': [], 'timestamp': '2016-12-02T15:27:11.899000+00:00', 'author': {'discriminator': '9195', 'avatar': '52c09ddd2c18d6a31774e43201080bb3', 'username': 'nekobot', 'bot': True, 'id': '253499115667849216'}, 'embeds': [], 'edited_timestamp': None, 'mentions': [], 'mention_roles': []}
+2016-12-02 08:27:19,361:DEBUG:discord.client: Dispatching event socket_raw_receive
+2016-12-02 08:27:19,361:DEBUG:discord.gateway: WebSocket Event: {'t': 'TYPING_START', 's': 6, 'op': 0, 'd': {'channel_id': '253996743862124546', 'user_id': '94815643441831936', 'timestamp': 1480692433}}
+2016-12-02 08:27:19,361:DEBUG:discord.client: Dispatching event socket_response
+2016-12-02 08:27:19,362:DEBUG:discord.client: Dispatching event typing
+2016-12-02 08:27:19,931:DEBUG:discord.client: Dispatching event socket_raw_receive
+2016-12-02 08:27:19,932:DEBUG:discord.gateway: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 7, 'op': 0, 'd': {'attachments': [], 'pinned': False, 'type': 0, 'mention_everyone': False, 'tts': False, 'nonce': '254267263882887168', 'content': 'hey', 'embeds': [], 'channel_id': '253996743862124546', 'timestamp': '2016-12-02T15:27:14.466000+00:00', 'author': {'discriminator': '1467', 'avatar': 'ee103c0c3b86744339be9bd2d631872f', 'username': 'MrRedAmber', 'id': '94815643441831936'}, 'id': '254267241649012736', 'edited_timestamp': None, 'mentions': [], 'mention_roles': []}}
+2016-12-02 08:27:19,932:DEBUG:discord.client: Dispatching event socket_response
+2016-12-02 08:27:19,932:DEBUG:discord.client: Dispatching event message
+2016-12-02 08:27:21,063:DEBUG:discord.client: Dispatching event socket_raw_receive
+2016-12-02 08:27:21,063:DEBUG:discord.gateway: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 8, 'op': 0, 'd': {'attachments': [], 'pinned': False, 'type': 0, 'mention_everyone': False, 'tts': False, 'nonce': '1652068181461880003', 'content': 'Hey there :3!\nhttps://media1.giphy.com/media/LOHk3OD288xjy/giphy.gif', 'embeds': [], 'channel_id': '253996743862124546', 'timestamp': '2016-12-02T15:27:15.597000+00:00', 'author': {'discriminator': '9195', 'avatar': '52c09ddd2c18d6a31774e43201080bb3', 'username': 'nekobot', 'bot': True, 'id': '253499115667849216'}, 'id': '254267246392639488', 'edited_timestamp': None, 'mentions': [], 'mention_roles': []}}
+2016-12-02 08:27:21,063:DEBUG:discord.client: Dispatching event socket_response
+2016-12-02 08:27:21,063:DEBUG:discord.client: Dispatching event message
+2016-12-02 08:27:21,084:DEBUG:discord.http: POST https://discordapp.com/api/v6/channels/253996743862124546/messages with {"content":"Hey there :3!\nhttps://media1.giphy.com/media/LOHk3OD288xjy/giphy.gif","nonce":1652068181461880003} has returned 200
+2016-12-02 08:27:21,085:DEBUG:discord.http: POST https://discordapp.com/api/v6/channels/253996743862124546/messages has received {'pinned': False, 'type': 0, 'mention_everyone': False, 'tts': False, 'nonce': '1652068181461880003', 'channel_id': '253996743862124546', 'content': 'Hey there :3!\nhttps://media1.giphy.com/media/LOHk3OD288xjy/giphy.gif', 'id': '254267246392639488', 'attachments': [], 'timestamp': '2016-12-02T15:27:15.597000+00:00', 'author': {'discriminator': '9195', 'avatar': '52c09ddd2c18d6a31774e43201080bb3', 'username': 'nekobot', 'bot': True, 'id': '253499115667849216'}, 'embeds': [], 'edited_timestamp': None, 'mentions': [], 'mention_roles': []}
+2016-12-02 08:27:21,482:DEBUG:discord.client: Dispatching event socket_raw_receive
+2016-12-02 08:27:21,482:DEBUG:discord.gateway: WebSocket Event: {'t': 'MESSAGE_UPDATE', 's': 9, 'op': 0, 'd': {'channel_id': '253996743862124546', 'embeds': [{'type': 'image', 'url': 'https://media1.giphy.com/media/LOHk3OD288xjy/giphy.gif', 'thumbnail': {'proxy_url': 'https://images-ext-2.discordapp.net/eyJ1cmwiOiJodHRwczovL21lZGlhMS5naXBoeS5jb20vbWVkaWEvTE9IazNPRDI4OHhqeS9naXBoeS5naWYifQ.jqkIiH2rxvvVT9JgylW9V5bS7VQ', 'width': 500, 'height': 375, 'url': 'https://media1.giphy.com/media/LOHk3OD288xjy/giphy.gif'}}], 'id': '254267246392639488'}}
+2016-12-02 08:27:21,482:DEBUG:discord.client: Dispatching event socket_response
+2016-12-02 08:27:21,483:DEBUG:discord.client: Dispatching event message_edit
+2016-12-02 08:27:38,771:DEBUG:discord.gateway: Keeping websocket alive with sequence 9
+2016-12-02 08:27:38,911:DEBUG:discord.client: Dispatching event socket_raw_receive
+2016-12-02 08:27:38,912:DEBUG:discord.gateway: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2016-12-02 08:27:38,912:DEBUG:discord.client: Dispatching event socket_response
+2016-12-02 08:28:20,023:DEBUG:discord.gateway: Keeping websocket alive with sequence None
+2016-12-02 08:28:20,138:DEBUG:discord.client: Dispatching event socket_raw_receive
+2016-12-02 08:28:20,138:DEBUG:discord.gateway: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2016-12-02 08:28:20,139:DEBUG:discord.client: Dispatching event socket_response
+2016-12-02 08:28:26,879:DEBUG:discord.client: Dispatching event socket_raw_receive
+2016-12-02 08:28:26,879:DEBUG:discord.gateway: WebSocket Event: {'t': 'TYPING_START', 's': 10, 'op': 0, 'd': {'channel_id': '253996743862124546', 'user_id': '94815643441831936', 'timestamp': 1480692501}}
+2016-12-02 08:28:26,879:DEBUG:discord.client: Dispatching event socket_response
+2016-12-02 08:28:26,879:DEBUG:discord.client: Dispatching event typing
+2016-12-02 08:28:28,674:DEBUG:discord.client: Dispatching event socket_raw_receive
+2016-12-02 08:28:28,674:DEBUG:discord.gateway: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 11, 'op': 0, 'd': {'attachments': [], 'pinned': False, 'type': 0, 'mention_everyone': False, 'tts': False, 'nonce': '254267552073515008', 'content': '!gif test', 'embeds': [], 'channel_id': '253996743862124546', 'timestamp': '2016-12-02T15:28:23.199000+00:00', 'author': {'discriminator': '1467', 'avatar': 'ee103c0c3b86744339be9bd2d631872f', 'username': 'MrRedAmber', 'id': '94815643441831936'}, 'id': '254267529935978496', 'edited_timestamp': None, 'mentions': [], 'mention_roles': []}}
+2016-12-02 08:28:28,675:DEBUG:discord.client: Dispatching event socket_response
+2016-12-02 08:28:28,675:DEBUG:discord.client: Dispatching event message
+2016-12-02 08:28:30,197:DEBUG:discord.client: Dispatching event socket_raw_receive
+2016-12-02 08:28:30,197:DEBUG:discord.gateway: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 12, 'op': 0, 'd': {'attachments': [], 'pinned': False, 'type': 0, 'mention_everyone': False, 'tts': False, 'nonce': '-578528493588523000', 'content': 'What a magificent gif! \nhttps://media0.giphy.com/media/geozuBY5Y6cXm/giphy.gif', 'embeds': [], 'channel_id': '253996743862124546', 'timestamp': '2016-12-02T15:28:24.718000+00:00', 'author': {'discriminator': '9195', 'avatar': '52c09ddd2c18d6a31774e43201080bb3', 'username': 'nekobot', 'bot': True, 'id': '253499115667849216'}, 'id': '254267536307126272', 'edited_timestamp': None, 'mentions': [], 'mention_roles': []}}
+2016-12-02 08:28:30,197:DEBUG:discord.client: Dispatching event socket_response
+2016-12-02 08:28:30,198:DEBUG:discord.client: Dispatching event message
+2016-12-02 08:28:30,205:DEBUG:discord.http: POST https://discordapp.com/api/v6/channels/253996743862124546/messages with {"content":"What a magificent gif! \nhttps://media0.giphy.com/media/geozuBY5Y6cXm/giphy.gif","nonce":-578528493588523000} has returned 200
+2016-12-02 08:28:30,206:DEBUG:discord.http: POST https://discordapp.com/api/v6/channels/253996743862124546/messages has received {'pinned': False, 'type': 0, 'mention_everyone': False, 'tts': False, 'nonce': '-578528493588523000', 'channel_id': '253996743862124546', 'content': 'What a magificent gif! \nhttps://media0.giphy.com/media/geozuBY5Y6cXm/giphy.gif', 'id': '254267536307126272', 'attachments': [], 'timestamp': '2016-12-02T15:28:24.718000+00:00', 'author': {'discriminator': '9195', 'avatar': '52c09ddd2c18d6a31774e43201080bb3', 'username': 'nekobot', 'bot': True, 'id': '253499115667849216'}, 'embeds': [], 'edited_timestamp': None, 'mentions': [], 'mention_roles': []}
+2016-12-02 08:28:30,605:DEBUG:discord.client: Dispatching event socket_raw_receive
+2016-12-02 08:28:30,605:DEBUG:discord.gateway: WebSocket Event: {'t': 'MESSAGE_UPDATE', 's': 13, 'op': 0, 'd': {'channel_id': '253996743862124546', 'embeds': [{'type': 'image', 'url': 'https://media0.giphy.com/media/geozuBY5Y6cXm/giphy.gif', 'thumbnail': {'proxy_url': 'https://images-ext-1.discordapp.net/eyJ1cmwiOiJodHRwczovL21lZGlhMC5naXBoeS5jb20vbWVkaWEvZ2VvenVCWTVZNmNYbS9naXBoeS5naWYifQ.X7MlQ2xb8upqWGo3cg4gO6X52YE', 'width': 466, 'height': 322, 'url': 'https://media0.giphy.com/media/geozuBY5Y6cXm/giphy.gif'}}], 'id': '254267536307126272'}}
+2016-12-02 08:28:30,605:DEBUG:discord.client: Dispatching event socket_response
+2016-12-02 08:28:30,605:DEBUG:discord.client: Dispatching event message_edit
+2016-12-02 08:29:01,280:DEBUG:discord.gateway: Keeping websocket alive with sequence 13
+2016-12-02 08:29:01,405:DEBUG:discord.client: Dispatching event socket_raw_receive
+2016-12-02 08:29:01,405:DEBUG:discord.gateway: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2016-12-02 08:29:01,405:DEBUG:discord.client: Dispatching event socket_response
+2016-12-02 08:29:12,898:DEBUG:discord.client: Dispatching event socket_raw_receive
+2016-12-02 08:29:12,898:DEBUG:discord.gateway: WebSocket Event: {'t': 'TYPING_START', 's': 14, 'op': 0, 'd': {'channel_id': '95598563198771200', 'user_id': '94815643441831936', 'timestamp': 1480692547}}
+2016-12-02 08:29:12,898:DEBUG:discord.client: Dispatching event socket_response
+2016-12-02 08:29:12,898:DEBUG:discord.client: Dispatching event typing
+2016-12-02 08:29:13,245:DEBUG:discord.client: Dispatching event socket_raw_receive
+2016-12-02 08:29:13,245:DEBUG:discord.gateway: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 15, 'op': 0, 'd': {'attachments': [], 'pinned': False, 'type': 0, 'mention_everyone': False, 'tts': False, 'nonce': '254267739055587328', 'content': 'hey', 'embeds': [], 'channel_id': '95598563198771200', 'timestamp': '2016-12-02T15:29:07.768000+00:00', 'author': {'discriminator': '1467', 'avatar': 'ee103c0c3b86744339be9bd2d631872f', 'username': 'MrRedAmber', 'id': '94815643441831936'}, 'id': '254267716872044544', 'edited_timestamp': None, 'mentions': [], 'mention_roles': []}}
+2016-12-02 08:29:13,245:DEBUG:discord.client: Dispatching event socket_response
+2016-12-02 08:29:13,245:DEBUG:discord.client: Dispatching event message
+2016-12-02 08:29:42,535:DEBUG:discord.gateway: Keeping websocket alive with sequence 15
+2016-12-02 08:29:42,644:DEBUG:discord.client: Dispatching event socket_raw_receive
+2016-12-02 08:29:42,645:DEBUG:discord.gateway: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2016-12-02 08:29:42,645:DEBUG:discord.client: Dispatching event socket_response
