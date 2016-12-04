@@ -26,7 +26,7 @@ def channel_specific(function):
     return wrapper
 
 
-def auth_required(function):
+def permission_required(function):
     """
         Check if a given user has permissions to execute a certain command
     """
@@ -46,6 +46,10 @@ def auth_required(function):
         if message.content.startswith('!ban'):
             kwargs['has_permission'] = permissions.get('ban_members')
         elif message.content.startswith('!kick'):
+            kwargs['has_permission'] = permissions.get('kick_members')
+        elif message.content.startswith('!whoisbanned'):
+            kwargs['has_permission'] = permissions.get('kick_members')
+        elif message.content.startswith('!unban'):
             kwargs['has_permission'] = permissions.get('kick_members')
 
         return await function(*args, **kwargs)
