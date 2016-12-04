@@ -15,12 +15,12 @@ class Giphy(Plugin):
     async def get_commands(self):
         commands = [
             {
-                'name': '!gif keyword',
+                'name': '!gif <keyword>',
                 'description': 'Search the Giphy collection '
                                'against a given keyword'
             },
             {
-                'name': '!giphy keyword',
+                'name': '!giphy <keyword>',
                 'description': 'Search the Giphy collection '
                                'against a given keyword'
             }

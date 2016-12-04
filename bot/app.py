@@ -7,6 +7,7 @@ from lib.nekobot import Nekobot
 from plugins import commands
 from plugins import giphy
 from plugins import nekobot
+from plugins import moderator
 
 # Finish loading the plugins
 

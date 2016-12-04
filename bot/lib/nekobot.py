@@ -2,6 +2,7 @@ import logging
 import discord
 
 from lib.plugin_manager import PluginManager
+from lib.database import Database
 
 log = logging.getLogger('discord')
 
@@ -11,11 +12,11 @@ class Nekobot(discord.Client):
     Modified discord.Client to support plugins
 
     v0.1 Nekobot =^..^=
-
     """
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        self.database = Database()
         self.plugin_manager = PluginManager(self)
         self.plugin_manager.load_all()
 
