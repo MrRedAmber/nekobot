@@ -30,10 +30,10 @@ class Nekobot(discord.Client):
 
         return None
 
+    # Get the commands in a list format
     async def get_commands(self):
         commands = []
         for plugin in self.plugins:
-            log.info('Plugin attributes: {0}'.format(plugin.__dict__))
             command_list = await plugin.get_commands()
             if command_list is not None:
                 commands.append(await plugin.get_commands())

@@ -1,15 +1,16 @@
 import logging, os
 
+# Import the modified client
 from lib.nekobot import Nekobot
 
+# Python level imports
+import importlib
+import os
+
 # Load the plugins
+for file in os.listdir('./plugins'):
+    importlib.import_module('plugins.' + file.split('.py')[0])
 
-from plugins import commands
-from plugins import giphy
-from plugins import nekobot
-from plugins import moderator
-
-# Finish loading the plugins
 
 # Setup the logging system
 logger = logging.getLogger('discord')

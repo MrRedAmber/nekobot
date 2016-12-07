@@ -36,7 +36,6 @@ class Giphy(Plugin):
             return data['data'][randrange(len(data['data']))] \
                 ['images']['original']['url']
         except Exception as e:
-            print(e.args)
             return 'Giphy encountered an error :cry: ...'
 
     async def on_message(self, message):
@@ -56,7 +55,7 @@ class Giphy(Plugin):
 
         nature, name = check.groups()
         gif = self.get_giphy(name)
-        print(gif)
+
         if gif == '' or gif is None:
             await self.nekobot.send_message(
                 message.channel,

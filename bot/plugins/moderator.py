@@ -2,14 +2,21 @@ from lib.plugin import Plugin
 from lib.decorators import permission_required
 from discord.errors import Forbidden, HTTPException
 import logging
-
+import discord
 
 log = logging.getLogger('discord')
 
 
 class Moderator(Plugin):
     plugin_name = 'Moderator'
-    channel_id = None
+
+    channels = [
+        {
+            'name': 'moderator',
+            'type': 'text',
+            'private': False
+        }
+    ]
 
     async def get_commands(self):
         commands = [
@@ -31,6 +38,22 @@ class Moderator(Plugin):
             }
         ]
         return commands
+
+    async def on_ready(self):
+        try:
+            # Check if the role exists in the first place
+            roles = []
+            for server in self.nekobot.servers:
+                role = discord.utils.get(server.roles, name='moderator')
+                if role is not None:
+                    roles.append(role)
+
+            for role in roles:
+                log.info('[ROLE]: {0}'.format(role.name))
+        except (Forbidden):
+            log.info('[FORBIDDEN]: Moderator.py')
+        except (HTTPException):
+            log.info('[HTTPEXCEPTION]: Moderator.py')
 
     @permission_required
     async def on_message(self, message, has_permission):
