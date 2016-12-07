@@ -1,7 +1,6 @@
-import inspect
 import logging
 
-logs = logging.getLogger('discord')
+log = logging.getLogger('discord')
 
 
 class PluginMount(type):
@@ -18,7 +17,7 @@ class PluginMount(type):
 class Plugin(object, metaclass=PluginMount):
 
     plugin_name = None
-    channel_name = None
+    channels = None
 
     def __init__(self, nekobot):
         self.nekobot = nekobot
@@ -63,6 +62,9 @@ class Plugin(object, metaclass=PluginMount):
         pass
 
     async def on_server_join(self, server):
+        pass
+
+    async def on_server_remove(self, server):
         pass
 
     async def on_server_update(self, before, after):
