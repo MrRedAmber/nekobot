@@ -1,7 +1,6 @@
 from lib.plugin import Plugin
 from lib.decorators import permission_required
 from discord.errors import Forbidden, HTTPException
-from aiohttp import ClientResponse
 import logging
 
 
