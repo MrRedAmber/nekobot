@@ -12,7 +12,6 @@ def channel_specific(function):
         if you implement this decorator you MUST set the
         channel_name variable in the plugin
     """
-
     async def wrapper(*args, **kwargs):
         # Check if the channel name is even set
         if args[0].channel_name is None:
