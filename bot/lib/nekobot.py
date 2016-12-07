@@ -20,48 +20,46 @@ class Nekobot(discord.Client):
         self.plugin_manager = PluginManager(self)
         self.plugin_manager.load_all()
 
-    async def create_nekobot_channel(self):
-        # Find out if any of the connects servers don't have 'nekobot' in their channels
-        server_list = []
-        for server in self.servers:
-            channel_list = []
+    async def get_channel_by_name(self, server, name):
+        for channel in server.channels:
+            if channel.name.lower() == name.lower():
+                return {
+                    'name': channel.name,
+                    'obj': channel
+                }
 
-            for channel in server.channels:
-                channel_list.append(channel.name)
-
-            if 'nekobot' not in channel_list:
-                server_list.append(server)
-
-        # Create the channel nekobot in the servers
-        if server_list is None:
-            return
-
-        # Iterate through all of the servers
-        for server in server_list:
-            # Create the channel
-            await self.create_channel(server, 'nekobot')
+        return None
 
     async def get_commands(self):
         commands = []
         for plugin in self.plugins:
+            log.info('Plugin attributes: {0}'.format(plugin.__dict__))
             command_list = await plugin.get_commands()
             if command_list is not None:
                 commands.append(await plugin.get_commands())
 
         return commands
 
+    # Called when the Client is ready
     async def on_ready(self):
-        # Called when the bot is ready
-        await self.create_nekobot_channel()
+        # Run each plugin's on ready
+        for plugin in self.plugins:
+            self.loop.create_task(plugin.on_ready())
+
         log.info('Nekobot is ready! =^..^=')
 
+    # Called when a server is either created by the Client or when the Client joins a server
     async def on_server_join(self, server):
-        pass
+        # Run each plugin's on server join
+        for plugin in self.plugins:
+            self.loop.create_task(plugin.on_server_join(server))
 
+    # We don't want to bother with private messages
     async def on_message(self, message):
         if message.channel.is_private:
             return
 
+        # Run each plugin's on message
         for plugin in self.plugins:
             self.loop.create_task(plugin.on_message(message))
 
