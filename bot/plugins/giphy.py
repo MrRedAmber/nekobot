@@ -66,5 +66,5 @@ class Giphy(Plugin):
 
         await self.nekobot.send_message(
             message.channel,
-            'What a magificent gif! \n' + gif
+            gif
         )
