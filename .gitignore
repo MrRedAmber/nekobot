@@ -1,3 +1,5 @@
 .idea/
 *.rc
 *.log
+.DS_Store
+*.pyc
