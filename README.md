@@ -1,5 +1,4 @@
 v0.1 (BETA)
-# Nekobot
 
 ![](http://nekobot.xyz/img/Logo_lightbg.png)
 ###  Docker usage
