@@ -1,11 +1,10 @@
-import logging, os
-
 # Import the modified client
 from lib.nekobot import Nekobot
 
 # Python level imports
 import importlib
 import os
+import logging
 
 # Load the plugins
 for file in os.listdir('./plugins'):
@@ -13,6 +12,7 @@ for file in os.listdir('./plugins'):
 
 
 # Setup the logging system
+
 logger = logging.getLogger('discord')
 handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
 handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))

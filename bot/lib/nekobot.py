@@ -27,7 +27,6 @@ class Nekobot(discord.Client):
                     'name': channel.name,
                     'obj': channel
                 }
-
         return None
 
     # Get the commands in a list format
@@ -48,7 +47,8 @@ class Nekobot(discord.Client):
 
         log.info('Nekobot is ready! =^..^=')
 
-    # Called when a server is either created by the Client or when the Client joins a server
+    # Called when a server is either created by the Client or when the Client
+    # joins a server
     async def on_server_join(self, server):
         # Run each plugin's on server join
         for plugin in self.plugins:
@@ -62,4 +62,3 @@ class Nekobot(discord.Client):
         # Run each plugin's on message
         for plugin in self.plugins:
             self.loop.create_task(plugin.on_message(message))
-
