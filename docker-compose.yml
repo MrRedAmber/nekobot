@@ -22,14 +22,10 @@ services:
   nginx:
     container_name: nekobot_nginx
 
-    image: nginx
+    build: ./nginx
 
     depends_on:
       - web
-
-    volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-      - ./web/static:/opt/web/static
 
     links:
       - web
@@ -37,6 +33,7 @@ services:
     ports:
       - "80:80"
       - "443:443"
+
   web:
     container_name: nekobot_web
 

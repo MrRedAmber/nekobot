@@ -7,9 +7,11 @@ import os
 import logging
 
 # Load the plugins
+
 for file in os.listdir('./plugins'):
     importlib.import_module('plugins.' + file.split('.py')[0])
 
+# Finish loading the plugins
 
 # Setup the logging system
 

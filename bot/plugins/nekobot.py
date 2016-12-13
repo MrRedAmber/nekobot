@@ -118,6 +118,7 @@ class Commands(Plugin):
         else:
             return
 
+
 # TODO: Works but needs to be cleaner
 class Channels(Plugin):
     plugin_name = 'nekobot-channels'
