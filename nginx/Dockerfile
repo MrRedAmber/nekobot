@@ -23,6 +23,4 @@ EXPOSE 80
 EXPOSE 443
 
 # Rezzurect the nginx service
-COPY ./rez.sh /tmp/rez.sh
-RUN chmod +x /tmp/rez.sh
-CMD [ "./tmp/rez.sh" ]
+CMD service nginx start && tail -f /tmp/access.log

@@ -2,10 +2,20 @@ v0.1 (BETA)
 
 ![](http://nekobot.xyz/img/Logo_lightbg.png)
 ###  Docker usage
-Building from source
-Running with docker
+_Building from source_
 ```bash
 $ docker-compose up --build
+```
+_Don't forget to create a nekobot.rc in the compose root! It should look a little something like this..._
+```bash
+# The discord application token
+NEKBOT_TOKEN=token
+
+# The log level of nekobot.log
+NEKOBOT_DEBUG=False
+
+# Flask debug level
+FLASK_DEBUG=False
 ```
 
 [URL to invite Nekobot to your server!](https://discordapp.com/oauth2/authorize?permissions=2146958463&scope=bot&client_id=253499115667849216)
