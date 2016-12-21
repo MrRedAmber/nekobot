@@ -9,7 +9,7 @@ $ docker-compose up --build
 _Don't forget to create a nekobot.rc in the compose root! It should look a little something like this..._
 ```bash
 # The discord application token
-NEKBOT_TOKEN=token
+NEKOBOT_TOKEN=token
 
 # The log level of nekobot.log
 NEKOBOT_DEBUG=False
@@ -18,7 +18,10 @@ NEKOBOT_DEBUG=False
 FLASK_DEBUG=False
 ```
 
-[URL to invite Nekobot to your server!](https://discordapp.com/oauth2/authorize?permissions=2146958463&scope=bot&client_id=253499115667849216)
+_[Here](https://discordapp.com/oauth2/authorize?permissions=2146958463&scope=bot&client_id=253499115667849216) is the url to invite the latest stable version of Nekobot to your Discord server!_
+```bash
+https://discordapp.com/oauth2/authorize?permissions=2146958463&scope=bot&client_id=253499115667849216
+```
 
 ### Features
 Plugin name | Plugin description | State
