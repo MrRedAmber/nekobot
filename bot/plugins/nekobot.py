@@ -118,6 +118,8 @@ class Commands(Plugin):
         else:
             return
 
+class Roles(Plugin):
+    plugin_name = ''
 
 # TODO: Works but needs to be cleaner
 class Channels(Plugin):
@@ -125,12 +127,14 @@ class Channels(Plugin):
 
     # Creates all the channels in plugins
     async def on_server_join(self, server):
+        # Enumerate all the channels required by the plugins
         plugin_channels = []
         for plugin in self.nekobot.plugins:
             tmp_list = plugin.channels
             if tmp_list is not None:
                 plugin_channels.append(tmp_list)
 
+        # For each enumerated channel, create...
         for plugin_channel in plugin_channels:
             for channel in plugin_channel:
                 log.info('CHANNEL INFORMATION: {0}'.format(channel))

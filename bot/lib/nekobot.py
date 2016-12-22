@@ -59,6 +59,9 @@ class Nekobot(discord.Client):
         if message.channel.is_private:
             return
 
+        # Log the message inside the database
+        self.database.log_message(message)
+
         # Run each plugin's on message
         for plugin in self.plugins:
             self.loop.create_task(plugin.on_message(message))

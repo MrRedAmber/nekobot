@@ -6,6 +6,18 @@ services:
     volumes:
       - data:/data/db
 
+  dbweb:
+    container_name: nekobot_dbweb
+    image: mongo-express:latest
+    ports:
+      - "8081:8081"
+    depends_on:
+      - db
+    links:
+      - db:mongo
+    env_file:
+      - ./nekobot.rc
+
   nekobot:
     container_name: nekobot_discord
     build: ./bot
