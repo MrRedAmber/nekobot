@@ -5,7 +5,8 @@ MAINTAINER kadenlnelson@gmail.com
 # Install nginx
 RUN apt-get update && apt-get install -y \
     nginx \
-    curl
+    curl \
+    letsencrypt
 
 # Stop the service for safety
 RUN service nginx stop
@@ -23,4 +24,11 @@ EXPOSE 80
 EXPOSE 443
 
 # Rezzurect the nginx service
-CMD service nginx start && tail -f /tmp/access.log
+CMD letsencrypt certonly \
+    --standalone \
+    -d nekobot.xyz \
+    -d www.nekobot.xyz \
+    --email kadenlnelson@gmail.com \
+    --agree-tos \
+    && service nginx start \
+    && tail -f /tmp/access.log
