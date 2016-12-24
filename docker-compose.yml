@@ -1,24 +1,15 @@
 version: '2'
 services:
   db:
+    restart: always
     container_name: nekobot_mongodb
     image: mongo:latest
     volumes:
-      - data:/data/db
-
-  dbweb:
-    container_name: nekobot_dbweb
-    image: mongo-express:latest
-    ports:
-      - "8081:8081"
-    depends_on:
-      - db
-    links:
-      - db:mongo
-    env_file:
-      - ./nekobot.rc
+      - /mnt/data/mongodb:/data/db
+#      - data/mongodb:/data/db
 
   nekobot:
+    restart: always
     container_name: nekobot_discord
     build: ./bot
     links:
@@ -27,6 +18,7 @@ services:
       - ./nekobot.rc
 
   nginx:
+    restart: always
     container_name: nekobot_nginx
     build: ./nginx
     depends_on:
@@ -36,8 +28,15 @@ services:
     ports:
       - "80:80"
       - "443:443"
+    volumes:
+      - /mnt/data/nginx/certs:/etc/letsencrypt/live/nekobot.xyz
+      - /mnt/data/nginx/logs:/var/log/nginx
+      - /mnt/data/letsencrypt/logs:/var/log/letsencrypt
+      - /mnt/data/letsencrypt/conf:/etc/letsencrypt
+      - /mnt/data/nginx/certs:/certs
 
   web:
+    restart: always
     container_name: nekobot_web
     build: ./web
     env_file:

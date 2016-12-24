@@ -30,5 +30,6 @@ CMD letsencrypt certonly \
     -d www.nekobot.xyz \
     --email kadenlnelson@gmail.com \
     --agree-tos \
+    --renew-by-default \
     && service nginx start \
-    && tail -f /tmp/access.log
+    && tail -f /var/log/nginx/access.log
