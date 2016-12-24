@@ -2,6 +2,7 @@ import logging
 import re
 from random import randrange
 import requests
+import aiohttp
 
 
 from lib.plugin import Plugin
@@ -27,16 +28,29 @@ class Giphy(Plugin):
         ]
         return commands
 
-    def get_giphy(self, keyword):
-        try:
-            data = requests.get('http://api.giphy.com/v1/gifs/search?q='
-                                    + keyword.replace(' ', '+')
-                                    + '&api_key=dc6zaTOxFJmzC').json()
+    async def get_giphy(self, keyword):
+        async with aiohttp.ClientSession() as session:
+            try:
+                async with session.get('http://api.giphy.com/v1/gifs/search?q='
+                                       + keyword.replace(' ','+')
+                                       + '&api_key=dc6zaTOxFJmzC') as resp:
 
-            return data['data'][randrange(len(data['data']))] \
-                ['images']['original']['url']
-        except Exception as e:
-            return 'Giphy encountered an error :cry: ...'
+                    if resp.status == 200:
+                        response_json = await resp.json()
+                        url = response_json.get('data')\
+                              [randrange(len(response_json.get('data')))]\
+                              .get('images')\
+                              .get('original')\
+                              .get('url')
+
+                        return url
+
+                    return 'Giphy encountered an error :cry: ...'
+
+            except Exception as e:
+                log.info("Cannot get gif from giphy api using keyword: {}".format(keyword))
+                log.info(e)
+                return 'Giphy encountered an error :cry: ...'
 
     async def on_message(self, message):
 
@@ -46,15 +60,8 @@ class Giphy(Plugin):
         if check is None:
             return
 
-        # log.info('{}#{}@{} >> {}'.format(
-        #     message.author.name,
-        #     message.author.discriminator,
-        #     message.server.name,
-        #     message.clean_content
-        # ))
-
         nature, name = check.groups()
-        gif = self.get_giphy(name)
+        gif = await self.get_giphy(name)
 
         if gif == '' or gif is None:
             await self.nekobot.send_message(
