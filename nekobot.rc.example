@@ -1,8 +1,0 @@
-# The discord application token
-NEKBOT_TOKEN=token
-
-# The log level of nekobot.log
-NEKOBOT_DEBUG=False
-
-# Flask debug level
-FLASK_DEBUG=False
