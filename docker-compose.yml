@@ -1,0 +1,23 @@
+version: '2'
+services:
+  nginx:
+    restart: always
+    container_name: nekobot_nginx
+    build: ./nginx
+    depends_on:
+      - web
+    links:
+      - web
+    ports:
+      - "80:80"
+
+  web:
+    restart: always
+    container_name: nekobot_web
+    build: ./web
+    env_file:
+      - ./nekobot.rc
+
+volumes:
+  data:
+
